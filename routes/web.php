@@ -1,11 +1,17 @@
 <?php
 
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use Laravel\WorkOS\Http\Middleware\ValidateSessionWithWorkOS;
 
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/auth/callback', function (Request $request) {
+    return $request;
+});
+
 
 Route::middleware([
     'auth',
