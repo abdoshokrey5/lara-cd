@@ -12,15 +12,6 @@ Route::get('/auth/callback', function (Request $request) {
     return $request;
 });
 
-
-
-
-
-
-
-
-
-
 Route::middleware([
     // 'auth',
     // ValidateSessionWithWorkOS::class,
