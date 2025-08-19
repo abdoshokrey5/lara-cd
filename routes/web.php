@@ -13,9 +13,17 @@ Route::get('/auth/callback', function (Request $request) {
 });
 
 
+
+
+
+
+
+
+
+
 Route::middleware([
-    'auth',
-    ValidateSessionWithWorkOS::class,
+    // 'auth',
+    // ValidateSessionWithWorkOS::class,
 ])->group(function () {
     Route::view('dashboard', 'dashboard')->name('dashboard');
 });
